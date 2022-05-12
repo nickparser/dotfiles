@@ -1,7 +1,13 @@
 #/usr/bin/bash
 
+# remove DE package 
+sudo apt remove ubuntu-desktop -y
+sudo apt udpate -y
+sudo apt dist-upgrade -y
+sudo apt autoremove -y
+sudo apt clean -y
+
 # install dependencies
-sudo apt update -y
 sudo apt install xorg suckless-tools build-essential libx11-dev libxinerama-dev libxft-dev git vim dmenu xdm -y
 
 # go to the home directory
