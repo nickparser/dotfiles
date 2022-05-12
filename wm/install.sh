@@ -17,4 +17,7 @@ cd dotfiles/wm/.dwm
 sudo make clean install
 echo “exec dwm” > ~/.xsession
 
+# copy dwm dir to the home dir
+cp -r dotfiles/wm/.dwm .
+
 reboot
