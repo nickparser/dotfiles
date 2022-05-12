@@ -1,11 +1,9 @@
 #/usr/bin/bash
 
 # remove DE package 
-sudo apt remove ubuntu-desktop -y
-sudo apt udpate -y
-sudo apt dist-upgrade -y
-sudo apt autoremove -y
-sudo apt clean -y
+sudo apt -y autoremove --purge ubuntu-desktop
+sudo apt update
+
 
 # install dependencies
 sudo apt install xorg suckless-tools build-essential libx11-dev libxinerama-dev libxft-dev git vim dmenu xdm -y
@@ -26,4 +24,5 @@ echo “exec dwm” > ~/.xsession
 # copy dwm dir to the home dir
 cp -r dotfiles/wm/.dwm .
 
+sudo chown nickparser:nickparser .Xauthority
 reboot
