@@ -1,7 +1,8 @@
-#!/usr/bin/bash
+#/usr/bin/bash
 
 # install dependencies
-apt install xorg sucklers-tools build-essential libx11-dev libxinerama-dev libxft-dev git vim dmenu xdm
+sudo apt update -y
+sudo apt install xorg suckless-tools build-essential libx11-dev libxinerama-dev libxft-dev git vim dmenu xdm -y
 
 # go to the home directory
 cd ~
@@ -13,7 +14,7 @@ git clone https://github.com/nickparser/dotfiles.git
 cd dotfiles/wm/.dwm
 
 # compile dwm
-make clean install
+sudo make clean install
 echo “exec dwm” > ~/.xsession
 
 reboot
