@@ -9,5 +9,6 @@ sudo make clean install
 echo “exec dwm” >> ~/.xinitrc
 echo "startx" >> ~/.bash_profile
 
-# copy dwm dir to the home dir
-cp -r dotfiles/wm/dwm .
+# copy dwm dir to the home config dir
+mkdir -p ~/.config
+cp -r dotfiles/wm/dwm ~/.config
