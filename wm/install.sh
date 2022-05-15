@@ -11,4 +11,4 @@ echo "startx" >> ~/.bash_profile
 
 # copy dwm dir to the home config dir
 mkdir -p ~/.config
-cp -r dotfiles/wm/dwm ~/.config
+cp -r ~/dotfiles/wm/dwm ~/.config
