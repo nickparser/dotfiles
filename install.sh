@@ -9,9 +9,8 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 
-# paru xrandr & fonts
-paru -S arandr
-paru -S ttf-font-awesome
+# install utilities
+paru -S arandr ttf-font-awesome feh
 
 # compile dwm
 cd ~/dotfiles/dwm
@@ -22,5 +21,6 @@ echo "startx" >> ~/.bash_profile
 # create config dir
 mkdir -p ~/.config
 cp -r ~/dotfiles/dwm ~/.config
-cp ~/dotfiles/autostart.sh ~/.config/autostart.sh
+cp ~/dotfiles/autostart.sh ~/.config
+cp ~/dotfiles/wallpaper.png ~/.config
 chmod +x ~/.config/autostart.sh
