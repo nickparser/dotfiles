@@ -10,7 +10,7 @@ cd paru
 makepkg -si
 
 # install utilities
-paru -S arandr ttf-font-awesome feh
+paru -S arandr ttf-font-awesome ttf-anonymous-pro feh picom
 
 # compile dwm
 cd ~/dotfiles/dwm
@@ -23,4 +23,6 @@ mkdir -p ~/.config
 cp -r ~/dotfiles/dwm ~/.config
 cp ~/dotfiles/autostart.sh ~/.config
 cp ~/dotfiles/wallpaper.png ~/.config
+cp -r ~/dotfiles/alacritty ~/.config
+
 chmod +x ~/.config/autostart.sh

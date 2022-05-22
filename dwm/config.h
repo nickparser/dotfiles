@@ -5,17 +5,16 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
+static const char *fonts[]          = { "Anonymous Pro:size=12" };
+static const char dmenufont[]       = "Anonymous Pro:size=12";
+static const char col_gray1[]       = "#232323";
+static const char col_gray2[]       = "#bbbbbb";
+static const char col_gray3[]      = "#999999";
 static const char col_dark[]        = "#171717";
-static const char col_yellow[]      = "#e5ff00";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, 	col_gray2 },
-	[SchemeSel]  = { col_dark, col_yellow, col_yellow },
+	[SchemeNorm] = { col_gray2, col_gray1, 	col_gray1 },
+	[SchemeSel]  = { col_dark, col_gray3, col_gray2 },
 };
 
 /* tagging */
@@ -53,7 +52,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_yellow, "-sf", col_dark, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray2, "-sb", col_gray3, "-sf", col_dark, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 
