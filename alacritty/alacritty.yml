@@ -204,7 +204,6 @@ colors:
     # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
     # color will be used.
     #dim_foreground: '#828482'
-    #bright_foreground: '#eaeaea'
 
   # Cursor colors
   #

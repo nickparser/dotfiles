@@ -9,10 +9,10 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 
-# install utilities
-paru -S arandr ttf-font-awesome ttf-anonymous-pro feh picom zsh
+# install utilities & fonts
+paru -S arandr ttf-anonymous-pro feh picom zsh
 
-# install oh-my-zsh
+# install oh-my-zsh & plugins
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting

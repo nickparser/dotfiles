@@ -12,18 +12,18 @@ clock() {
 	dte=$(date +"%D")
 	time=$(date +"%H:%M")
 
-	echo " $dte  $time"
+	echo "date: $dte time: $time"
 }
 
 network() {
 	conntype=$(ip route | awk '/default/ { print substr($5,1,1) }')
 
 	if [ -z "$conntype" ]; then
-		echo " down"
+		echo "net: down"
 	elif [ "$conntype" = "e" ]; then
-		echo " up"
+		echo "ethernet: up"
 	elif [ "$conntype" = "w" ]; then
-		echo " up"
+		echo "wifi: up"
 	fi
 }
 
@@ -34,12 +34,12 @@ cpu() {
 	read -r cpu a b c idle rest < /proc/stat
 	total=$((a+b+c+idle))
 	cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
-	echo " $cpu"
+	echo "cpu: $cpu"
 }
 
 ram() {
 	mem=$(free -h | awk '/Mem:/ { print $3 }' | cut -f1 -d 'i')
-	echo " $mem"
+	echo "ram: $mem"
 }
 
 
