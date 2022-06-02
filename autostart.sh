@@ -3,8 +3,7 @@
 # ---------------- monitors  ----------------
 xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1634x1440 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-2 --mode 2560x1440 --pos 0x0 --rotate normal
 
-feh --no-fehbg --bg-center ~/.config/wallpaper.jpg
-picom -b --no-fading-openclose
+hsetroot -solid "#282a36"
 
 
 # ---------------- statusbar ----------------

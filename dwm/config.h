@@ -6,7 +6,6 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Anonymous Pro:size=12" };
-static const char dmenufont[]       = "Anonymous Pro:size=12";
 static const char col_gray[]       = "#282a36";
 static const char col_purple[]       = "#d6acff";
 static const char col_green[]      = "#69ff94";
@@ -50,14 +49,13 @@ static const Layout layouts[] = {
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray, "-nf", col_purple, "-sb", col_green, "-sf", col_gray, NULL };
+static const char *roficmd[] = { "rofi", "-show", "run", "-m", "-4", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,            	XK_l, 	   spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
