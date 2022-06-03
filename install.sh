@@ -21,6 +21,10 @@ wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 cp ~/dotfiles/.zshrc ~/
+git clone https://github.com/dracula/zsh.git
+mv zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/
+mv zsh/lib ~/.oh-my-zsh/themes/lib
+sudo rm -r zsh
 
 # vim 
 # vim plug
