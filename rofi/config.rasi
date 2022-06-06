@@ -12,11 +12,11 @@
     drac-red: #ff5555;
     drac-yel: #f1fa8c;
 
-    font: "Anonymous Pro";
+    font: "Anonymous Pro 12";
 
     foreground: @drac-fgd;
     background-color: @drac-bgd;
-    active-background: @drac-pnk;
+    active-background: @drac-pur;
     urgent-background: @drac-red;
     
     selected-background: @active-background;
