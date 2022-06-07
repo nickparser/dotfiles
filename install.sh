@@ -28,10 +28,13 @@ sudo rm -r zsh
 
 # vim 
 # vim plug
-# only for dirvish plugin
-sudo pacman -S trash-cli
+# for dirvish & fzf plugins
+sudo pacman -S trash-cli the_silver_searcher highlight
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# vim theme
+paru -S vim-everforest-git
 
 # install nodejs for coc (superuser needed)
 curl -sL install-node.vercel.app/lts | bash

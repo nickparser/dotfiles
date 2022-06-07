@@ -1,5 +1,6 @@
 " set internal encoding of vim
 set encoding=utf-8
+scriptencoding utf-8
 
 " lines number
 set number
@@ -27,21 +28,49 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " rust.vim 
 Plug 'rust-lang/rust.vim'
 
-" dracula theme
-Plug 'dracula/vim', { 'as': 'dracula' }
-
 " dirvish.vim
 Plug 'justinmk/vim-dirvish'
 Plug 'roginfarrer/vim-dirvish-dovish', {'branch': 'main'}
 
+" fzf.vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
-"enable color scheme
-colorscheme dracula
+" Important!!
+if has('termguicolors')
+  set termguicolors
+endif
+
+" For dark version.
+set background=dark
+
+" Set contrast.
+" This configuration option should be placed before `colorscheme everforest`.
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:everforest_background = 'hard'
+
+" For better performance
+let g:everforest_better_performance = 1
+colorscheme everforest
+
+" displaying tabs as characters
+set list
+set listchars=space:·
 
 " enable syntax
 syntax enable
 filetype plugin indent on
+
+" show existing tab with 4 spaces width
+set tabstop=4
+
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+
+" On pressing tab, insert 4 spaces
+set expandtab
 
 " enable formating rust code
 let g:rustfmt_autosave=1
@@ -100,3 +129,7 @@ augroup netrw_mapping
   autocmd!
   autocmd filetype netrw call s:netrw_key_mapping()
 augroup END
+
+" fzf configurations
+nnoremap <silent><C-p> :GFiles --cached --others --exclude-standard<CR>
+nnoremap <silent><C-f> :Ag<CR>
