@@ -81,6 +81,7 @@ set cmdheight=2
 " show the signcolumn
 set signcolumn=yes
 
+" coc configurations
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? "\<C-n>" :
@@ -98,6 +99,11 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" applying codeAction to the selected region
+nmap <Space>a <Plug>(coc-codeaction-selected)
+" open diagnostics window
+nmap <silent><Space><Space>f :<C-u>CocList diagnostics<cr>
 
 " vim mapping
 :imap jj <Esc>
