@@ -5,7 +5,6 @@ xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1634x1440 --rotate normal
 
 hsetroot -solid "#282a36"
 
-
 # ---------------- statusbar ----------------
 clock() {
 	dte=$(date +"%D")
@@ -52,3 +51,6 @@ statusbar() {
 }
 
 statusbar
+
+# ---------------- picom -------------------
+exec picom
