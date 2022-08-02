@@ -2,7 +2,7 @@
 
 # -----------------------  system  -----------------------
 # install dependencies
-sudo pacman -Sy dbus udisks2 xorg-server xorg-xsetroot xorg-xinit libx11 libxinerama libxft webkit2gtk alacritty gvim wget slock hsetroot rofi lightdm lightdm-gtk-greeter lightdm-gtk-greeter maim xclip picom
+sudo pacman -Sy dbus udisks2 xorg-server xorg-xsetroot xorg-xinit libx11 libxinerama libxft webkit2gtk alacritty gvim wget slock hsetroot rofi lightdm lightdm-gtk-greeter maim xclip picom
 
 # install rust 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -20,7 +20,6 @@ paru -S yay arandr ttf-anonymous-pro zsh
 # create config dir
 mkdir -p ~/.config
 cp -r ~/dotfiles/rofi ~/.config
-echo "exec picom" >> ~/.xinitrc
 
 # ---------------------  terminal  -----------------------
 # install oh-my-zsh
