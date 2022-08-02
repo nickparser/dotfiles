@@ -50,7 +50,4 @@ statusbar() {
 	done
 }
 
-statusbar
-
-# ---------------- picom -------------------
-exec picom
+statusbar && exec picom
